@@ -1,0 +1,29 @@
+ul{
+    border: 3px solid black;
+    width:50%;
+    margin: 100px;
+    display: flex;
+    flex-direction: column;
+
+}
+li{
+    background-color: bisque;
+    margin:15px;
+    display:flex;
+    width: 25%;
+    padding: 20px;
+    justify-content: center;
+    align-self: end;
+    color: white;
+
+}
+
+li:first-child{
+    background-color: red;
+}
+li:last-child{
+    background-color: green;
+}
+li:nth-child(2){
+    background-color: blue;
+}
