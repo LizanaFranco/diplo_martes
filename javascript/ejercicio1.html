@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    /*Ejecicio 1 -----------------*/
+    let instancia = prompt('ingrese una instancia(metros)');
+    if(instancia>0 && instancia<1000){
+        document.write(`es conveniente ir a pie`);
+
+    }else if(instancia>=1000 && instancia<10000){
+        document.write(`es conveniente ir en bicicleta`);
+    }else if(instancia>=10000 && instancia<30000){
+        document.write('es conveninete ir en colectivo');
+    }else if(instancia>=30000 && instancia<100000){
+        document.write('es conveniente ir en auto');
+    }else{
+        document.write('es conveniente ir en avion');
+    }
+</script>
+
+</body>
+</html>
