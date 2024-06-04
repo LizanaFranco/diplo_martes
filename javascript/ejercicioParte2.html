@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .caja {
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            border: 1px solid black;
+        }
+    </style>
+
+<body>
+    <h2>ejercicio1</h2>
+    <div class="caja" id="caja" onclick="cambiar();">
+
+    </div>
+    <hr>
+    <h2>ejercicio2</h2>
+    <div class="ejercicio2">
+        <textarea name="texto" id="textarea"></textarea>
+        <button class="boton" onclick="contar();" value="contar">contar</button>
+
+    </div>
+    <hr>
+    <h2>ejercicio3</h2>
+    <div>
+        <button class="resultado" onclick="prueba()">Resultado de ejercicio3</button>
+    </div>
+    <script>
+        function prueba() {
+            if (document.querySelector('.resultado')) {
+
+                var alumnos = [
+                    {
+                        nombre: 'Juan Gomez',
+                        nota: 7
+                    }, {
+
+                        nombre: 'Pedro Rodriguez',
+                        nota: 4
+                    }, {
+
+                        nombre: 'Roxana García',
+                        nota: 8
+                    }, {
+
+                        nombre: 'Luciano Lopez',
+                        nota: 5
+                    }, {
+
+                        nombre: 'Fernanda Gimenez',
+                        nota: 6
+                    }, {
+
+                        nombre: 'Florencia Martinez',
+
+                        nota: 10
+                    }, {
+
+                        nombre: 'Raul Sanchez',
+                        nota: 7
+                    }, {
+
+                        nombre: 'Sandra Figueroa',
+                        nota: 8
+                    }
+                ];
+
+                const Aprovados = alumnos.filter(alumnos => alumnos.nota >= 7);
+                console.log(Aprovados);
+                document.write("alumnos aprovados <br><hr>");
+                Aprovados.forEach(x => {
+                    document.write(`Alumno:${x.nombre} nota: ${x.nota} <hr>`);
+                });
+            }
+        }
+
+
+        function cambiar() {
+            const caja = document.querySelector('.caja');
+            if (caja.style.backgroundColor === "red") {
+                caja.style.backgroundColor = "white";
+            } else {
+                caja.style.backgroundColor = "red";
+            }
+        }
+
+        function contar() {
+
+            if (document.querySelector('.boton')) {
+                console.log(1);
+                if (document.querySelector('textarea')) {
+                    const texto = document.querySelector('textarea').value;
+                    alert(`el texto tiene ${texto.length} letras`);
+                }
+
+            }
+        }
+    </script>
+</body>
+
+</html>
